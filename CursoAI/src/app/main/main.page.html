@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Contenedor del formulario con animación -->
+  <div class="login-container">
+    <ion-card class="fade-in">
+      <ion-card-header>
+        <ion-card-title>Iniciar Sesión</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Campo Usuario -->
+        <ion-item class="input-item" lines="none">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+
+        <!-- Campo Contraseña -->
+        <ion-item class="input-item" lines="none">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+
+        <!-- Enlace Olvidaste tu contraseña -->
+        <div class="forgot-password ion-text-end ion-margin-top">
+          <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <!-- Botón con efecto -->
+        <ion-button expand="full" class="ion-margin-top login-button">
+          Ingresar
+        </ion-button>
+
+        <!-- Separador "O" -->
+        <div class="separator ion-text-center ion-margin">
+          <span>O</span>
+        </div>
+
+        <!-- Enlace Crear cuenta -->
+        <div class="create-account ion-text-center ion-margin-top">
+          <a href="#" class="create-link">Crear cuenta</a>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

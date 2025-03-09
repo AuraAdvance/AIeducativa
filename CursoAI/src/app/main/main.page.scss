@@ -1,0 +1,196 @@
+/* ===== Fondo con efecto Parallax ===== */
+ion-content {
+  --background: url('https://img.goodfon.com/original/1926x929/e/a4/planet-gold-earth.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: parallaxMove 10s infinite alternate ease-in-out;
+}
+
+/* Animación de Parallax */
+@keyframes parallaxMove {
+  from {
+    background-position: center center;
+  }
+  to {
+    background-position: center 105%;
+  }
+}
+
+/* ===== Contenedor del formulario con animación de entrada ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation: fadeInBlur 0.8s ease-out;
+}
+
+/* Animación de aparición elegante */
+@keyframes fadeInBlur {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ===== Tarjeta de inicio de sesión con ligero movimiento sutil ===== */
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(46, 0, 252, 0.3);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.9); /* Fondo translúcido */
+}
+
+/* Movimiento sutil para dar elegancia */
+@keyframes subtleMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(3px);
+  }
+}
+
+/* ===== Campos de Usuario y Contraseña translúcidos ===== */
+.input-item {
+  animation: fadeInUp 0.8s ease-out;
+  border-radius: 0px;
+  --background: rgba(0, 0, 0, 0.0);
+  background: var(--background);
+  border: 1px solid rgba(0, 0, 0, 0.0);
+  --color: rgb(0, 0, 0);
+  --placeholder-color: rgba(0, 0, 0, 0.0);
+  position: relative; /* Para la línea animada */
+  transition: transform 0.3s ease; /* Suavidad en la elevación */
+}
+
+.input-item ion-input {
+  color: #ffffff; /* Texto blanco */
+}
+
+.input-item ion-label {
+  color: rgba(255, 255, 255, 0.8); /* Etiqueta semi-transparente */
+}
+
+.input-item:focus-within {
+  --background: rgba(0, 0, 0, 0.0); /* Fondo sin cambios */
+  background: var(--background); /* Asegura consistencia */
+  transform: translateY(-3px); /* Elevación sutil */
+}
+
+/* Línea animada debajo */
+.input-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8); /* Azul elegante */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.input-item:focus-within::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ===== Estilos del botón con efecto de interacción ===== */
+.login-button {
+  --background: #ff9800;
+  --background-hover: #f57c00;
+  --border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.4);
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(255, 152, 0, 0.6);
+}
+
+/* ===== Animación de fade-in para los elementos del formulario ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para Olvidaste tu contraseña */
+.forgot-password {
+  font-size: 14px;
+}
+
+.forgot-link {
+  color: rgba(255, 255, 255, 0.8); /* Blanco semitransparente como las etiquetas */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: #ff9800; /* Naranja del botón para interacción */
+  text-decoration: underline;
+}
+
+/* Estilo para el separador O */
+.separator {
+  position: relative;
+  margin: 20px 0;
+}
+
+.separator span {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.9); /* Fondo igual a la tarjeta */
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3); /* Líneas grises sutiles */
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+
+/* Estilo para Crear cuenta */
+.create-account {
+  font-size: 16px;
+}
+
+.create-link {
+  color: rgba(255, 255, 255, 0.8); /* Blanco semitransparente */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.create-link:hover {
+  color: #ff9800; /* Naranja para interacción */
+  text-decoration: underline;
+}
